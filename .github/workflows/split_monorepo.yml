@@ -5,7 +5,7 @@ on:
     tags:
       - '*'
     branches:
-      - '1.0'
+      - 'master'
 
 jobs:
   split_monorepo:
