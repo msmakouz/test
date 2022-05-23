@@ -1,0 +1,10 @@
+{
+    "name": "test/test2",
+    "type": "library",
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Test\\": "src"
+        }
+    }
+}
