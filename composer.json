@@ -8,7 +8,9 @@
         }
     },
     "autoload-dev": {
-        "MonorepoBuilder\\": "builder"
+        "psr-4": {
+            "MonorepoBuilder\\": "builder"
+        }
     },
     "require-dev": {
         "symplify/monorepo-builder": "^10.1"

@@ -20,7 +20,7 @@ final class ProcessParser implements TagParserInterface
      */
     public function parse(string $gitDirectory): array
     {
-        return $this->parseTags($this->processRunner->run(self::COMMAND, $gitDirectory));
+        return \array_filter($this->parseTags($this->processRunner->run(self::COMMAND, $gitDirectory)));
     }
 
     /**

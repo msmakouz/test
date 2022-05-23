@@ -31,6 +31,11 @@ use Symplify\MonorepoBuilder\Release\ReleaseWorker\UpdateBranchAliasReleaseWorke
         'description'       => $dest['description'] ?? '',
         'require'           => $dest['require'] ?? [],
         'autoload'          => $dest['autoload'] ?? [],
+        'autoload-dev' => [
+            'psr-4' => [
+                'MonorepoBuilder\\' => 'builder',
+            ],
+        ],
         'require-dev'       => $dest['require-dev'] ?? [],
         'minimum-stability' => $dest['minimum-stability'] ?? 'dev',
         'prefer-stable'     => $dest['prefer-stable'] ?? true,
@@ -47,7 +52,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     $parameters->set(Option::PACKAGE_ALIAS_FORMAT, '<major>.<minor>.x-dev');
     $parameters->set(Option::PACKAGE_DIRECTORIES, ['src']);
-    $parameters->set(Option::DEFAULT_BRANCH_NAME, '1.6');
 
     $services = $containerConfigurator->services();
 
