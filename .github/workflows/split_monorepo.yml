@@ -45,7 +45,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         with:
-          tag: ${GITHUB_REF#refs/tags/}
+          tag: ${{ github.ref_name }}
           branch: ${{ github.ref_name }}
           package_directory: 'src/${{ matrix.package.local_path }}'
           repository_organization: 'msmakouz'
