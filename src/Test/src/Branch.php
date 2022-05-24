@@ -6,5 +6,5 @@ namespace Test;
 
 class Branch
 {
-    private const NAME = '1.0.1';
+    private const NAME = '1.0.2';
 }
